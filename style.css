@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-	padding: 0 5% 5% 5%;
+	padding-bottom: 5% ;
 	max-width: 1000px;
 }
 .title {
@@ -17,6 +17,7 @@ body {
 .title h3 span {
 	margin: 0 5px 10px 10px;
 	max-width: 160px;
+	max-height: 45px;
 }
 #js-newGameElement .btn {
 	text-transform: uppercase;
@@ -79,9 +80,14 @@ body {
 	#js-resultsTableElement .myFlex {
 		flex-direction: column;
 	}
+
 }
 @media (max-width: 991px) {
 	.title h3  {
 		font-size: 30px;
+	}
+	.container {
+		padding-right: 5%;
+		padding-left: 5%;
 	}
 }

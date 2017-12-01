@@ -10,11 +10,14 @@ body {
 	padding-top: 20px;
 }
 .title h3 {
+	font-size: 40px;
+}
+.title .myLabels {
 	display: flex;
 	justify-content: center;
 	font-size: 40px;
 }
-.title h3 span {
+.title .myLabels span {
 	margin: 0 5px 10px 10px;
 	max-width: 160px;
 	max-height: 45px;

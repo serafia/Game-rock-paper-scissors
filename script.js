@@ -6,11 +6,15 @@ newGameBtn.addEventListener('click', newGame);
 
 var pickRock = document.getElementById('js-playerPick_rock'),
      pickPaper = document.getElementById('js-playerPick_paper'),
-     pickScissors = document.getElementById('js-playerPick_scissors');
+     pickScissors = document.getElementById('js-playerPick_scissors'),
+     pickLizard = document.getElementById('js-playerPick_lizard'),
+     pickSpock = document.getElementById('js-playerPick_spock');
 
 pickRock.addEventListener('click', function() { playerPick('rock') });
 pickPaper.addEventListener('click', function() { playerPick('paper') });
 pickScissors.addEventListener('click', function() { playerPick('scissors') });
+pickLizard.addEventListener('click', function() { playerPick('lizard') });
+pickSpock.addEventListener('click', function() { playerPick('spock') });
 
 var newGameElem = document.getElementById('js-newGameElement'),
     pickElem = document.getElementById('js-playerPickElement'),
@@ -71,8 +75,8 @@ function setGameElements() {
   }
 }
 function getComputerPick() {
-    var possiblePicks = ['rock', 'paper', 'scissors'];
-    return possiblePicks[Math.floor(Math.random()*3)];
+    var possiblePicks = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+    return possiblePicks[Math.floor(Math.random()*5)];
 }
 
 function playerPick(playerPick) {
@@ -96,7 +100,14 @@ function checkRoundWinner(playerPick, computerPick) {
     } else if (
         (computerPick == 'rock' &&  playerPick == 'scissors') ||
         (computerPick == 'scissors' &&  playerPick == 'paper') ||
-        (computerPick == 'paper' &&  playerPick == 'rock')) {
+        (computerPick == 'paper' &&  playerPick == 'rock') ||
+        (computerPick == 'rock' &&  playerPick == 'lizard') ||
+        (computerPick == 'lizard' &&  playerPick == 'spock') ||
+        (computerPick == 'paper' &&  playerPick == 'spock') ||
+        (computerPick == 'lizard' &&  playerPick == 'paper') ||
+        (computerPick == 'spock' &&  playerPick == 'rock') ||
+        (computerPick == 'spock' &&  playerPick == 'scissors') ||
+        (computerPick == 'scissors' &&  playerPick == 'lizard')) {
 
         winnerIs = 'computer';
     }

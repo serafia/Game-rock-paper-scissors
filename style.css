@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-	padding-bottom: 5% ;
+	padding-bottom: 25px;
 	max-width: 1000px;
 }
 .title {
@@ -86,8 +86,12 @@ body {
 
 }
 @media (max-width: 991px) {
-	.title {
-		font-size: 30px;
+	.title h3 {
+		font-size: 25px;
+	}
+	.title .myLabels .label {
+		font-size: 25px;
+		font-weight: 400;
 	}
 	.container {
 		padding-right: 5%;
